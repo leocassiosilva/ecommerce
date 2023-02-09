@@ -37,6 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #api 
+    'rest_framework',
+
+
+    #app 
+    'product'
+
+    
 ]
 
 MIDDLEWARE = [
@@ -85,7 +94,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ecommerce',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
         'PORT': '5432',
     }
