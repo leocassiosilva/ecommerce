@@ -10,5 +10,5 @@ class ProductSerializer(serializers.ModelSerializer):
             "id",
             "name",
             "price",
-            "score"
+            "score",
         ]
