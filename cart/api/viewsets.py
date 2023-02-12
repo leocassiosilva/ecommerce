@@ -29,6 +29,12 @@ class CartViewSet(
     serializer_class = CartSerializer
 
 
+    @action(detail=False, methods=["get"])
+    def checkout(self, request, *args, **kwargs):
+        #vai verificar o carrinho de compras
+
+
+
     @action(detail=True, methods=["get"])
     def remover_product(self, request, *args, **kwargs):
         id_produto = request.GET.get('id', None)

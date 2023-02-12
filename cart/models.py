@@ -23,6 +23,17 @@ class Cart(models.Model):
         default=1
     )
 
+
+    @property
+    #A cada produto adicionado, deve-se somar R$ 10,00 ao frete.
+    #Quando o valor dos produtos adicionados ao carrinho for igual ou superior a R$ 250,00, o frete é grátis.
+    def calcular_frete(self):
+        pass
+
+    
+
+
+
     class Meta:
         app_label = 'cart'
         verbose_name = 'Cart'
