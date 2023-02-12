@@ -29,6 +29,9 @@ class Product(models.Model):
         'Modificado em', 
         auto_now=True
     )
+    
+    def __str__(self):
+        return "{}".format(self.name)
 
     class Meta:
         app_label = 'product'
