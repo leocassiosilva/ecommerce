@@ -5,6 +5,8 @@ Ela possui as seguintes características:
 
 * Login (http://127.0.0.1:8000/api/auth/login/) OBS: Precisa passar o username e a senha. Ademais, é prciso pegar o access_token, em  Autorization selecionar Bear Token e inserir o access_token)
 
+* Logout (http://127.0.0.1:8000/api/auth/logout/) 
+
 * Crud de Products
 
 * Adicionar item ao carrinho (Exemplo url: http://127.0.0.1:8000/cart/cart/{id}/add_cart_itens/?id=2&quantidade=10) 
