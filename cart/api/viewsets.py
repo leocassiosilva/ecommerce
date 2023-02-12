@@ -51,9 +51,6 @@ class CartViewSet(
             except Exception as e:
                 print("Errro {e}")
 
-            
-
-
         return Response(
                 {"message": "O id do produto não é valido existe."},
                 status=status.HTTP_400_BAD_REQUEST,
