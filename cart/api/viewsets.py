@@ -36,7 +36,7 @@ class CartViewSet(
         id_cart = int(kwargs['pk'])
         try: 
             #consulta um Cart 
-            cart = Cart.objects.filter(pk=id_cart)
+            cart = Cart.objects.filter(pk=id_cart, user=request.user)
             for carrinho in cart:
                 cart_item_produto = carrinho.cart_itens.filter(products_id=id_produto)
             
