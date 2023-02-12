@@ -1,5 +1,4 @@
 from django.db import models
-
 class Product(models.Model):
 
     name = models.CharField(
@@ -30,6 +29,15 @@ class Product(models.Model):
         auto_now=True
     )
     
+    @property
+    def list_produtos(self):
+        from cart.models import Cart
+
+        Cart.objects.filter(user_id=self.request.user.id)
+        return "Cart.objects.filter(user_id=self.request_user)"
+    
+
+
     def __str__(self):
         return "{}".format(self.name)
 

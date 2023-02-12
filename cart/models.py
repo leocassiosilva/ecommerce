@@ -2,6 +2,29 @@ from django.db import models
 from django.contrib.auth.models import User
 from product.models import Product
 
+
+class CartItem(models.Model):
+
+    products = models.ForeignKey(
+        Product, 
+        verbose_name="Produtos",
+        on_delete=models.CASCADE
+    )
+
+    quantidade = models.PositiveIntegerField(
+        verbose_name="Quantidade", 
+        default=1
+    )
+
+    def __str__(self):
+        return "{}".format(self.products)
+
+    class Meta:
+        app_label = 'cart'
+        verbose_name = 'Cart Item'
+        verbose_name_plural = 'Cart Item'
+
+
 class Cart(models.Model):
 
     user = models.OneToOneField(
@@ -13,29 +36,20 @@ class Cart(models.Model):
         blank=True,
     )
 
-    products = models.ManyToManyField(
-        Product, 
-        verbose_name="Produtos",
+    cart_itens = models.ManyToManyField(
+        CartItem, 
+        verbose_name="CartItems",
+        blank=True,
+
     )
 
-    quantidade = models.PositiveIntegerField(
-        verbose_name="Produtos", 
-        default=1
-    )
-
-
-    @property
-    #A cada produto adicionado, deve-se somar R$ 10,00 ao frete.
-    #Quando o valor dos produtos adicionados ao carrinho for igual ou superior a R$ 250,00, o frete é grátis.
-    def calcular_frete(self):
-        pass
-
-    
-
+    def __str__(self):
+        return "{}".format(self.user)
 
 
     class Meta:
         app_label = 'cart'
         verbose_name = 'Cart'
         verbose_name_plural = 'Cart'
-        # ordering = ['product']
+
+

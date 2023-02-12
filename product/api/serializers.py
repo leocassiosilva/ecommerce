@@ -12,3 +12,6 @@ class ProductSerializer(serializers.ModelSerializer):
             "price",
             "score",
         ]
+    #metodo criar um produto
+    def create(self, validated_data):
+        return Product.objects.create(**validated_data)
