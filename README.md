@@ -15,7 +15,7 @@ Ela possui as seguintes características:
 
 * Listagem de itens no carrinho (Exemplo url: http://127.0.0.1:8000/cart/cart/5/cart_itens/) 
 
-* Listar Pedidos (Exemplo url: http://127.0.0.1:8000/pedido/pedido/meus_pedidos) 
+* Listar Pedidos (Exemplo url: http://127.0.0.1:8000/pedido/pedido/) 
 
 ### 📋 Pré-requisitos
 

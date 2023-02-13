@@ -51,7 +51,8 @@ INSTALLED_APPS = [
 
     #app 
     'product',
-    'cart'
+    'cart',
+    'pedido'
 
     
 ]
