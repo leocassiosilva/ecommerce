@@ -54,7 +54,7 @@ nome_da_virtualenv/Scripts/Activate
 
 4. Obtenha o código:
 ```bash
-git clone https://github.com/leocassiosilva/api_django.git
+git clone https://github.com/leocassiosilva/ecommerce.git
 ```
 
 5. Instale as dependências utilizando o pip:
